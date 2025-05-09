@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { shareReplay } from 'rxjs/operators';
 import { Company } from './models';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/envs/env';
 
 @Injectable({ providedIn: 'root' })
 export class ApiService {
@@ -13,11 +14,8 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getCompanies(): Observable<Company[]> {
-    if (!this.companies$) {
-      this.companies$ = this.http
-        .get<Company[]>('/api/companies')
-        .pipe(shareReplay(1));
-    }
-    return this.companies$;
+    return this.http.get<Company[]>(`${environment.apiUrl}/companies`)
+      .pipe(shareReplay(1));
   }
+
 }
