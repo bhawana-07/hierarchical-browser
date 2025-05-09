@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { shareReplay } from 'rxjs/operators';
 import { Company } from './models';
 import { Injectable } from '@angular/core';
-import { environment } from 'src/envs/env';
+import { environment } from 'src/environments/env';
 
 @Injectable({ providedIn: 'root' })
 export class ApiService {
