@@ -1,0 +1,14 @@
+<h1>Plants</h1>
+<ul>
+  <li *ngFor="let p of plants">
+    <a [routerLink]="['/',
+        companyCode,
+        countryCode,
+        stateCode,
+        locationCode,
+        p.plant_code
+      ]">
+      {{ p.plant_name }} ({{ p.lines.length }})
+    </a>
+  </li>
+</ul>

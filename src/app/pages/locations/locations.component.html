@@ -1,0 +1,8 @@
+<h1>Locations</h1>
+<ul>
+  <li *ngFor="let loc of locations">
+ <a [routerLink]="['/', companyCode, countryCode, stateCode, loc.location_code]">
+      {{ loc.location_name }} ({{ loc.plants.length }})
+    </a>
+  </li>
+</ul>

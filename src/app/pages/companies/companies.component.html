@@ -1,0 +1,8 @@
+<h1>Companies</h1>
+<ul>
+  <li *ngFor="let c of companies">
+    <a [routerLink]="[c.company_code]">
+      {{ c.company_name }} ({{ c.countries.length }})
+    </a>
+  </li>
+</ul>

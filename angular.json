@@ -68,7 +68,8 @@
               "browserTarget": "hierarchical-browser:build:production"
             },
             "development": {
-              "browserTarget": "hierarchical-browser:build:development"
+              "browserTarget": "hierarchical-browser:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

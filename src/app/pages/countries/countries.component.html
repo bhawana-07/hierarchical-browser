@@ -1,0 +1,10 @@
+<h1>Countries</h1>
+<!-- src/app/pages/countries/countries.component.html -->
+<ul>
+  <li *ngFor="let co of countries">
+   <a [routerLink]="['/', companyCode, co.country_code]">
+      {{ co.country_name }} ({{ co.states.length }})
+    </a>
+  </li>
+</ul>
+
